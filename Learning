@@ -1,0 +1,19 @@
+package me.learning.main;
+
+import org.bukkit.ChatColor;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import me.learning.events.EventsClass;
+
+public class Learning extends JavaPlugin {
+
+	public void onEnable() {
+		getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Learning has been enabled!");
+		getServer().getPluginManager().registerEvents(new EventsClass(), this);
+	}
+
+	public void onDisable() {
+		getServer().getConsoleSender().sendMessage(ChatColor.RED + "Learning has been disabled!");
+	}
+
+}
